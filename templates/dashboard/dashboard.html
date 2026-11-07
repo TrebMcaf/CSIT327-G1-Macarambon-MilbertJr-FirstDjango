@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="h4 mb-3">Welcome, {{ user.first_name|default:user.username }}!</h2>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item">Role: {{ user.get_role_display }}</li>
+                    <li class="list-group-item">Course: {{ user.course|default:"Not set" }}</li>
+                    <li class="list-group-item">Member since: {{ member_count }}</li>
+                    <li class="list-group-item">Last login: {{ user.last_login|date:"M d, Y" }}</li>
+                </ul>
+                <a href="{% url 'profile' %}" class="btn btn-outline-success btn-sm">Edit profile</a>
+                {% if is_admin %}
+                    <a href="{% url 'admin_panel' %}" class="btn btn-success btn-sm">Open Admin Panel</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

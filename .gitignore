@@ -1,0 +1,12 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local database (may contain user data)
+
+# Environment files
+.env
