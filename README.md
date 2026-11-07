@@ -29,9 +29,9 @@ A Django app with sign-up, login, a dashboard, and a user profile page, styled w
    # macOS / Linux
    source .venv/bin/activate
    ```
-3. Install Django:
+3. Install the dependencies:
    ```bash
-   pip install django
+   pip install -r requirements.txt
    ```
 4. Apply migrations:
    ```bash

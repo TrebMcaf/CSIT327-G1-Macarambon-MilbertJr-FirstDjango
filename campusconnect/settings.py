@@ -131,3 +131,5 @@ MAILERS = {
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'login'
+# Match the primary key type used in the existing migrations
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
